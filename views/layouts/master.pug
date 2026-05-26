@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
+        title #{title}
+
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700")
+
+    body(class="hold-transition sidebar-mini layout-fixed")
+
+        .wrapper
+
+            include ../partials/navbar
+            include ../partials/sidebar
+
+            .content-wrapper
+
+                .content-header
+                    .container-fluid
+                        .row.mb-2
+
+                            .col-sm-6
+                                h1.m-0 #{pageTitle}
+
+                            .col-sm-6
+                                ol.breadcrumb.float-sm-right
+                                    li.breadcrumb-item
+                                        a(href="/dashboard") Home
+
+                                    li.breadcrumb-item.active #{pageTitle}
+
+                section.content
+                    .container-fluid
+                        block content
+
+            include ../partials/footer
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js")
