@@ -1,0 +1,49 @@
+doctype html
+
+html
+
+    head
+
+        title Login
+
+        link(
+            rel="stylesheet"
+            href="/dist/css/adminlte.min.css"
+        )
+
+    body.login-page
+
+        .login-box
+
+            .card
+
+                .card-body.login-card-body
+
+                    p.login-box-msg
+
+                        | Login Sistem
+
+                    form(
+                        action="/login"
+                        method="POST"
+                    )
+
+                        .input-group.mb-3
+
+                            input.form-control(
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                            )
+
+                        .input-group.mb-3
+
+                            input.form-control(
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                            )
+
+                        button.btn.btn-primary.btn-block
+
+                            | Login
